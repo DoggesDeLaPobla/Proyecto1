@@ -1,2 +1,2 @@
-# Proyecto1
+# Proyecto
 Repositorio creado por el grupo "DoggesDeLaPobla"
