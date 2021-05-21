@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Gato</folder>
+	<filename>gato23.jpg</filename>
+	<path>C:\Users\anago\OneDrive - Universidad Técnica Federico Santa María\Doggesdelapobla\Clasificador\Dataset\Gato\gato23.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>744</width>
+		<height>465</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>211</xmin>
+			<ymin>19</ymin>
+			<xmax>679</xmax>
+			<ymax>423</ymax>
+		</bndbox>
+	</object>
+</annotation>

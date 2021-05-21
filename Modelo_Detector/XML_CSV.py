@@ -11,7 +11,7 @@ def xml_to_csv(path):
         root = tree.getroot()
 
         for member in root.findall('object'):
-            value = ('imagenes/'+root.find('filename').text,
+            value = (root.find('filename').text,
                      int(member[4][0].text),
                      int(member[4][1].text),
                      int(member[4][2].text),

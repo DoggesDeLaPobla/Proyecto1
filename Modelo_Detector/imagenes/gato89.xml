@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Gato</folder>
+	<filename>gato89.jpg</filename>
+	<path>C:\Users\anago\OneDrive - Universidad Técnica Federico Santa María\Doggesdelapobla\Clasificador\Dataset\Gato\gato89.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>400</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>7</xmin>
+			<ymin>177</ymin>
+			<xmax>290</xmax>
+			<ymax>337</ymax>
+		</bndbox>
+	</object>
+</annotation>

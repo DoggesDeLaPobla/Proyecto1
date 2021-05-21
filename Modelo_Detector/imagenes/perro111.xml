@@ -1,0 +1,26 @@
+<annotation>
+	<folder>perro</folder>
+	<filename>perro 111.jpg</filename>
+	<path>C:\Users\alici\Downloads\perro\perro 111.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>77</xmin>
+			<ymin>34</ymin>
+			<xmax>692</xmax>
+			<ymax>566</ymax>
+		</bndbox>
+	</object>
+</annotation>

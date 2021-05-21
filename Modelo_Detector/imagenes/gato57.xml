@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Gato</folder>
+	<filename>gato57.jpg</filename>
+	<path>C:\Users\anago\OneDrive - Universidad Técnica Federico Santa María\Doggesdelapobla\Clasificador\Dataset\Gato\gato57.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>750</width>
+		<height>491</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>53</ymin>
+			<xmax>519</xmax>
+			<ymax>392</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>463</xmin>
+			<ymin>182</ymin>
+			<xmax>750</xmax>
+			<ymax>427</ymax>
+		</bndbox>
+	</object>
+</annotation>
