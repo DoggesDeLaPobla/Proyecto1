@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Perro</folder>
+	<filename>perro92.jpg</filename>
+	<path>C:\Users\ethan\OneDrive - Universidad Técnica Federico Santa María\Documentos\Universidad\2021\2021 -Semestre 1\IWG101 P9\Proyecto_Intro\Doggesdelapobla\Clasificador\Dataset\Perro\perro92.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>420</width>
+		<height>280</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>85</xmin>
+			<ymin>62</ymin>
+			<xmax>220</xmax>
+			<ymax>255</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>206</xmin>
+			<ymin>50</ymin>
+			<xmax>327</xmax>
+			<ymax>248</ymax>
+		</bndbox>
+	</object>
+</annotation>
