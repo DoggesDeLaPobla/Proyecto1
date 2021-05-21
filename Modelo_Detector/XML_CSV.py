@@ -33,7 +33,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import matplotlib.patches as patches
 
-%matplotlib inline
+
+print(dataset_df)
 
 def showObjects(image_df):
 
