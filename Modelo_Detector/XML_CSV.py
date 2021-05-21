@@ -52,7 +52,7 @@ def showObjects(image_df):
     ax.add_patch(rect)
     plt.show()
 
-   showObjects(dataset_df.iloc[2])
+showObjects(dataset_df.iloc[2])
    
    
 # DIVIDIR DATASET
