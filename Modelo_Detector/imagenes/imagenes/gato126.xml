@@ -1,0 +1,26 @@
+<annotation>
+	<folder>gato</folder>
+	<filename>gato126.jpg</filename>
+	<path>C:\Users\alici\Downloads\gato\gato126.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>240</width>
+		<height>160</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>116</xmin>
+			<ymin>5</ymin>
+			<xmax>231</xmax>
+			<ymax>135</ymax>
+		</bndbox>
+	</object>
+</annotation>

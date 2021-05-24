@@ -1,0 +1,26 @@
+<annotation>
+	<folder>perros</folder>
+	<filename>perro255.jpg</filename>
+	<path>C:\Users\alici\OneDrive\Escritorio\perros\perro255.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>270</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dog</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>25</xmin>
+			<ymin>118</ymin>
+			<xmax>232</xmax>
+			<ymax>444</ymax>
+		</bndbox>
+	</object>
+</annotation>
