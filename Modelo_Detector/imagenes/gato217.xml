@@ -1,0 +1,26 @@
+<annotation>
+	<folder>gatos</folder>
+	<filename>gato217.jpg</filename>
+	<path>C:\Users\alici\OneDrive\Escritorio\gatos\gato217.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>450</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>49</xmin>
+			<ymin>108</ymin>
+			<xmax>313</xmax>
+			<ymax>504</ymax>
+		</bndbox>
+	</object>
+</annotation>
