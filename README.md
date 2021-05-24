@@ -12,3 +12,4 @@ Donde procesamos el data set:<br>
 <------- Nube con más información e instrucctivos -------><br>
 ☁ https://usmcl-my.sharepoint.com/:f:/g/personal/ethan_leiva_usm_cl/ErvVWQQnTvZCmqCxm3eJ1PQB6-HL0ac2BCV6Gb5vJfv85Q?e=fD5lE9
 
+hola fabian
