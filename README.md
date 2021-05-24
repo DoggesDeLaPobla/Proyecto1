@@ -1,4 +1,4 @@
-# Proyecto
+# Proyecto DoggesDeLaPobla🐕🦴
 Repositorio creado por el grupo "DoggesDeLaPobla"<br>
 
 Este proyecto utiliza diferente documentación y programas para su desarrollo 
