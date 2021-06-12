@@ -9,6 +9,7 @@ sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 
 # Instalamos la version de opencv 3.4
 pip3 install opencv-python==3.4.6.27
+# Librerias para el bot de telegram
 pip3 install python-telegram-bot --upgrade
 
 
