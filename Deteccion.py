@@ -87,7 +87,7 @@ resW, resH = args.resolution.split('x')
 imW, imH = int(resW), int(resH)
 use_TPU = args.edgetpu
 
-# Importamos las librerias de tensorflow
+# Import TensorFlow libraries
 # If tflite_runtime is installed, import interpreter from tflite_runtime, else import from regular tensorflow
 # If using Coral Edge TPU, import the load_delegate library
 pkg = importlib.util.find_spec('tflite_runtime')
@@ -184,7 +184,7 @@ while True:
     boxes = interpreter.get_tensor(output_details[0]['index'])[0] # Bounding box coordinates of detected objects
     classes = interpreter.get_tensor(output_details[1]['index'])[0] # Class index of detected objects
     scores = interpreter.get_tensor(output_details[2]['index'])[0] # Confidence of detected objects
-    #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Numero total de detecciones no necesario para el caso actual
+    #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Total number of detected objects (inaccurate and not needed)
 
     # Loop para recorrer todos los elementos encontrados
     for i in range(len(scores)):
@@ -201,13 +201,13 @@ while True:
                 
                 cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (10, 255, 0), 2)
 
-                # Dibujamos el label con la información
+                # Draw label
                 
-                label = '%s: %d%%' % (categorias[object_name], int(scores[i]*100)) #agrega el % de seguridad de la detección
-                labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Obtenemos el font size
-                label_ymin = max(ymin, labelSize[1] + 10) # nos aseguramos de dibujar dentro de la imagen
-                cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Dibujamos un cuadrado blanco
-                cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Escribimos el texto
+                label = '%s: %d%%' % (categorias[object_name], int(scores[i]*100)) # Example: 'person: 72%'
+                labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
+                label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
+                cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
+                cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
                 
                 for i in copia:
                     if len(i.split(" "))>=6:
@@ -216,11 +216,21 @@ while True:
                             cv2.imwrite("frame.jpg", frame)
                             bot.send_photo(chat_id=i.split(" ")[3], photo=open('frame.jpg','rb'))
 
-    # calculamos los FPS
-    t2 = cv2.getTickCount()
-    time1 = (t2-t1)/freq
-    frame_rate_calc= 1/time1
-    print(frame_rate_calc)
+    # Draw framerate in corner of frame
+    #cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
 
-# Limpiamos todo
+    # All the results have been drawn on the frame, so it's time to display it.
+    #cv2.imshow('Object detector', frame)
+
+    # calculamos los FPS
+    #t2 = cv2.getTickCount()
+    #time1 = (t2-t1)/freq
+    #frame_rate_calc= 1/time1
+
+    # Salimos con la letra e
+    #if cv2.waitKey(1) == ord('e'):
+    #    break
+
+# Clean up
+cv2.destroyAllWindows()
 videostream.stop()

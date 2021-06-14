@@ -1,30 +1,18 @@
-######## Chat-Bot #########
-#       By: DoggesDeLaPobla
-#
-#
-#
-
-#paquetes a utlizar
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 import cv2
 
-
-#Leemos el token de acceso de del bot contenido en el archivo bot.key
 f = open("bot.key", "r")
 key=f.read()
 f.close()
 modo=0
 
 
-#La funcion para el comando /start que indica lo que el bot puede realizar
 def start(update, context):
     update.message.reply_text("Hola soy BitBot Tu asistente para perros y gatos\nA continuación un pequeño ejemplo de uso\nPrimero indicame tu tipo de mascota Perro o Gato\n /Animal Perro /Animal Gato /Animal Ambos\n En caso de cualquier error o asistiencia escribe /help")
 
-#Función encargada de almacenar el tipo de animal a notificar según el usuario
 def animal(update, context):
-    #comprobamos que el usuario agregue el tipo de animal al comando animal
     if len(update.message.text)>len("/Animal") and (str(update.message.text).split(" ")[1]=="Perro" or str(update.message.text).split(" ")[1]=="Gato" or str(update.message.text).split(" ")[1]=="Ambos"):
-        f = open("usuarios.codec", "w+")#archivo de configuración de los usuarios su id, usuario y tipo de animal
+        f = open("usuarios.codec", "w+")
         copy=""
         est=False
         f2=f.read()
@@ -43,14 +31,14 @@ def animal(update, context):
     else:
         update.message.reply_text("No me has especificado correctamente tu tipo de animal\nRecuerda que acepto: /Animal Perro /Animal Gato /Animal Ambos")
 
-#Comando apara configurar el area de detección del bot
+
 def config(update, context):
     global modo
     if modo==0:
         modo=1
         update.message.reply_text("Hola ahora quieres configurar el area de deteccion")
 
-#funcion para leer imagenes que manda el usuario
+
 def image_handler(update, context):
     global modo
     if modo==1:
