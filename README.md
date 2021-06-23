@@ -22,5 +22,18 @@ Proyecto realizado para la asignatura Introducción a la ingeniería telemática
 
 # Instalación y funcionamiento del programa
 
+Primero clonamos el repositorio
 
-https://github.com/DoggesDeLaPobla/Proyecto1.git
+git clone https://github.com/DoggesDeLaPobla/Proyecto1.git
+
+Segundo entrados al repositorio clonado
+
+cd cd Proyecto1/
+
+Tercero
+
+Ejecutamos "requerimientos.sh"
+
+sh requerimientos.sh
+
+Finalmente podemos ejecutar el programa
