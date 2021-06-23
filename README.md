@@ -28,7 +28,7 @@ git clone https://github.com/DoggesDeLaPobla/Proyecto1.git
 
 Segundo entrados al repositorio clonado
 
-cd cd Proyecto1/
+cd Proyecto1/
 
 Tercero
 
