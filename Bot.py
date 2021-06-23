@@ -12,19 +12,26 @@ def start(update, context):
 
 def animal(update, context):
     if len(update.message.text)>len("/Animal") and (str(update.message.text).split(" ")[1]=="Perro" or str(update.message.text).split(" ")[1]=="Gato" or str(update.message.text).split(" ")[1]=="Ambos"):
-        f = open("usuarios.codec", "w+")
+        f = open("usuarios.codec", "r")
         copy=""
         est=False
-        f2=f.read()
+        f2=f.readlines()
         for i in f2:
-            if update.message.chat.id in i:
-                copy+="Usuario: "+str(update.message.from_user.first_name)+" Clave: "+str(update.message.chat.id)+" Tipo: "+str(update.message.text).split(" ")[1]
+            if i.count(str(update.message.chat.id))>0:
+                copy+="Usuario: "+str(update.message.from_user.first_name)+" Clave: "+str(update.message.chat.id)+" Tipo: "+str(update.message.text).split(" ")[1]+"\n"
                 est=True
             else:
-                copy+=i
+                if len(i)>5:
+                    copy+=i+"\n"
         if not est:
             copy+="Usuario: "+str(update.message.from_user.first_name)+" Clave: "+str(update.message.chat.id)+" Tipo: "+str(update.message.text).split(" ")[1]
-        f.write(copy)
+        s=""
+        for i in copy.split("\n"):
+            if len(i)>5:
+                s+=i+"\n"
+        f.close()
+        f=open("usuarios.codec","w+")
+        f.write(s)
         f.close()
         update.message.reply_text("Tu tipo de animal a sido anclado a tu perfil!\nEsta es una foto del lugar de donde te notificare")
         context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('frame1.jpg','rb'))

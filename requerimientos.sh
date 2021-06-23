@@ -10,7 +10,7 @@ sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 # Instalamos la version de opencv 3.4
 pip3 install opencv-python==3.4.6.27
 #instalamos telegram y telegram bot para generar el bot que procesa y envia los mensajes
-pip3 install python-telegram-bot --upgrade
+pip3 install python-telegram-bot==12.4.2
 pip3 install telegram
 
 #instalamos tensorflow la versión 1.14
