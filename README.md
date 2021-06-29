@@ -24,7 +24,6 @@ Proyecto realizado para la asignatura Introducción a la ingeniería telemática
 
 Primero clonamos el repositorio
 ```
-
 git clone https://github.com/DoggesDeLaPobla/Proyecto1.git
 ```
 
