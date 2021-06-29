@@ -1,6 +1,6 @@
 import os
 
-file=open("sudo nano /etc/xdg/lxsession/LXDE-pi/autostart","a")
+file=open("/etc/xdg/lxsession/LXDE-pi/autostart","a")
 
 file.write("Prueba")
 
