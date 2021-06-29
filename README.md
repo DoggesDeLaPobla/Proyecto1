@@ -39,3 +39,11 @@ sh requerimientos.sh
 Finalmente podemos ejecutar el programa
 
 sh iniciar.sh
+
+Si deseas crear el inicio automatico del programa puedes utlizar
+
+sudo Auto.py
+
+y para eliminar el inicio automatico
+
+sudo DelAuto.py
