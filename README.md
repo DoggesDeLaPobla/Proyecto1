@@ -23,27 +23,30 @@ Proyecto realizado para la asignatura Introducción a la ingeniería telemática
 # Instalación y funcionamiento del programa
 
 Primero clonamos el repositorio
+```
 
 git clone https://github.com/DoggesDeLaPobla/Proyecto1.git
+```
 
 Segundo entrados al repositorio clonado
-
+```
 cd Proyecto1/
-
+```
 Tercero
 
 Ejecutamos "requerimientos.sh"
-
+```
 sh requerimientos.sh
-
+```
 Finalmente podemos ejecutar el programa
-
+```
 sh iniciar.sh
-
+```
 Si deseas crear el inicio automatico del programa puedes utlizar
-
+```
 sudo Auto.py
-
+```
 y para eliminar el inicio automatico
-
+```
 sudo DelAuto.py
+```
