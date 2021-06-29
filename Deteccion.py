@@ -71,7 +71,6 @@ parser.add_argument('--Desarrollador', help='Activar modo desarrollador',
 args = parser.parse_args()
 
 Estado = bool(args.Desarrollador)
-print(Estado)
 
 MODEL_NAME = "Sample_TFLite_model"#carpeta del modelo
 GRAPH_NAME = "detect.tflite"#los pesos del modelo
@@ -134,7 +133,6 @@ try:
         f.close
         if a<100:
             a+=1
-            print(a)
 
         t1 = cv2.getTickCount()
 
