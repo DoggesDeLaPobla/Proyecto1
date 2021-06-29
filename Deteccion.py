@@ -181,7 +181,7 @@ try:
                     if a >99:
                         for i in copia:
                             if len(i.split(" "))>=6:
-                                if i.split(" ")[5]=="Ambos" or  str(i.split(" ")[5]).count(categorias[object_name])>0:
+                                if i.split(" ")[5].count("Ambos")>0 or  str(i.split(" ")[5]).count(categorias[object_name])>0:
                                     bot.send_message(i.split(" ")[3], "Hey "+i.split(" ")[1]+" creo que tu "+categorias[object_name]+" desea entrar, te mando foto")
                                     cv2.imwrite("frame.jpg", frame)
                                     bot.send_photo(i.split(" ")[3], open('frame.jpg','rb'))

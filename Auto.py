@@ -2,8 +2,6 @@ import os
 
 file=open("/etc/xdg/lxsession/LXDE-pi/autostart","a")
 
-file.write("Prueba")
+file.write("lxterminal -e sh "+os.path.abspath(os.getcwd())+"/iniciar.sh")
 
 file.close()
-
-print(os.path.abspath(os.getcwd()))

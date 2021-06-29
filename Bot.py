@@ -36,7 +36,7 @@ def button(update, context):
         if len(i)>5:
             s+=i+"\n"
     f.close()
-    f=open("usuarios.codec","w+")
+    f=open("usuarios.codec","w")
     f.write(s)
     f.close()
     query.message.reply_text("Tu tipo de animal a sido anclado a tu perfil!\nEsta es una foto del lugar de donde te notificare")
