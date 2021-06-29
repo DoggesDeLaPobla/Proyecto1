@@ -16,7 +16,7 @@ import importlib.util
 import telebot
 from tensorflow.lite.python.interpreter import Interpreter
 
-f = open(os.path.abspath(os.getcwd())+"bot.key", "r")
+f = open(os.path.dirname(os.path.abspath(__file__))+"/bot.key", "r")
 key=f.read()
 f.close()
 bot = telebot.TeleBot(key)
@@ -83,7 +83,7 @@ use_TPU = False
 
 
 # Optenemos el path del directorio actual
-CWD_PATH = os.getcwd()
+CWD_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # Sacamos el path del modelo lite
 PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,GRAPH_NAME)
@@ -128,7 +128,7 @@ a=100
 try:
     while True:
         #abrimos el archivo con los usuarios
-        f = open("usuarios.codec", "r")
+        f = open(os.path.dirname(os.path.abspath(__file__))+"/usuarios.codec", "r")
         copia = f.readlines()
         f.close
         if a<100:
@@ -138,7 +138,7 @@ try:
 
         # extraemos un frame
         frame1 = videostream.read()
-        cv2.imwrite("frame1.jpg", frame1)
+        cv2.imwrite(os.path.dirname(os.path.abspath(__file__))+"/frame1.jpg", frame1)
 
         # lo clonamos y le ajustamos la resolucion
         frame = frame1.copy()
