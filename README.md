@@ -37,3 +37,5 @@ Ejecutamos "requerimientos.sh"
 sh requerimientos.sh
 
 Finalmente podemos ejecutar el programa
+
+sh iniciar.sh
