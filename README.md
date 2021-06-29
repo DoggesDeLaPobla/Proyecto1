@@ -43,9 +43,9 @@ sh iniciar.sh
 ```
 Si deseas crear el inicio automatico del programa puedes utlizar
 ```
-sudo Auto.py
+sudo python3 Auto.py
 ```
 y para eliminar el inicio automatico
 ```
-sudo DelAuto.py
+sudo python3 DelAuto.py
 ```
