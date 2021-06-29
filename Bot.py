@@ -1,12 +1,15 @@
+import time
 try:
     from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
     from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackQueryHandler
 except:
     print("Prueba eliminar la libreria telegram pip3 uninstall telegram")
     print("e instala pip3 install python-telegram-bot --upgrade")
+    time.sleep(60)
 import cv2
+import os
 
-f = open("bot.key", "r")
+f = open(os.path.abspath(os.getcwd())+"bot.key", "r")
 key=f.read()
 f.close()
 modo=0
@@ -18,7 +21,7 @@ def start(update, context):
 def button(update, context):
     query = update.callback_query
     query.answer()
-    f = open("usuarios.codec", "r")
+    f = open(os.path.abspath(os.getcwd())+"usuarios.codec", "r")
     copy=""
     est=False
     f2=f.readlines()
@@ -36,7 +39,7 @@ def button(update, context):
         if len(i)>5:
             s+=i+"\n"
     f.close()
-    f=open("usuarios.codec","w")
+    f=open(os.path.abspath(os.getcwd())+"usuarios.codec","w")
     f.write(s)
     f.close()
     query.message.reply_text("Tu tipo de animal a sido anclado a tu perfil!\nEsta es una foto del lugar de donde te notificare")
@@ -74,9 +77,9 @@ def image_handler(update, context):
     if modo==1:
 
         photo_file = update.message.photo[-1].get_file()
-        photo_file.download('./deteccion.jpg')
+        photo_file.download(os.path.abspath(os.getcwd())+'/deteccion.jpg')
         
-        img = cv2.imread("./deteccion.jpg")
+        img = cv2.imread(os.path.abspath(os.getcwd())+"/deteccion.jpg")
         img = cv2.resize(img, (1280,720))
 
 

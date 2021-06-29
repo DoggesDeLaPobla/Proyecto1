@@ -16,7 +16,7 @@ import importlib.util
 import telebot
 from tensorflow.lite.python.interpreter import Interpreter
 
-f = open("bot.key", "r")
+f = open(os.path.abspath(os.getcwd())+"bot.key", "r")
 key=f.read()
 f.close()
 bot = telebot.TeleBot(key)
