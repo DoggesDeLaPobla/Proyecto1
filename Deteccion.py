@@ -13,13 +13,13 @@ import sys
 import time
 from threading import Thread
 import importlib.util
-import telegram
+import telebot
 from tensorflow.lite.python.interpreter import Interpreter
 
 f = open("bot.key", "r")
 key=f.read()
 f.close()
-bot = telegram.Bot(token=key)
+bot = telebot.TeleBot(key)
 
 categorias={"dog":"Perro","cat":"Gato"}
 
@@ -173,20 +173,20 @@ try:
                     
                     cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (10, 255, 0), 2)
 
-                    # Draw label
+                    # dibuja el rectangulo
                     
-                    label = '%s: %d%%' % (categorias[object_name], int(scores[i]*100)) # Example: 'person: 72%'
-                    labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
-                    label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
-                    cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
-                    cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
+                    label = '%s: %d%%' % (categorias[object_name], int(scores[i]*100)) # Pone el porcentaje de coincidencia
+                    labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # establece el tamaño de la letra
+                    label_ymin = max(ymin, labelSize[1] + 10) # crea el tamaño del rectangulo
+                    cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Dibujamos el cuadrado finalmente
+                    cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # pone el texto en el rectangulo
                     
                     for i in copia:
                         if len(i.split(" "))>=6:
                             if i.split(" ")[5]=="Ambos" or  str(i.split(" ")[5]).count(categorias[object_name])>0 and a>99:
-                                bot.send_message(chat_id=i.split(" ")[3], text="Hey "+i.split(" ")[1]+" creo que tu "+categorias[object_name]+" desea entrar, te mando foto")
+                                bot.send_message(i.split(" ")[3], "Hey "+i.split(" ")[1]+" creo que tu "+categorias[object_name]+" desea entrar, te mando foto")
                                 cv2.imwrite("frame.jpg", frame)
-                                bot.send_photo(chat_id=i.split(" ")[3], photo=open('frame.jpg','rb'))
+                                bot.send_photo(i.split(" ")[3], open('frame.jpg','rb'))
                                 a=0
 
         
@@ -211,4 +211,3 @@ except:
     videostream.stop()
 videostream.stop()
 cv2.destroyAllWindows()
-
