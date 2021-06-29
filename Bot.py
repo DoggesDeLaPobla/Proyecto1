@@ -1,5 +1,9 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackQueryHandler
+try:
+    from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+    from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackQueryHandler
+except:
+    print("Prueba eliminar la libreria telegram pip3 uninstall telegram")
+    print("e instala pip3 install python-telegram-bot --upgrade")
 import cv2
 
 f = open("bot.key", "r")
