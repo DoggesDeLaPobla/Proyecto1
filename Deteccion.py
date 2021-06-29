@@ -178,14 +178,14 @@ try:
                     label_ymin = max(ymin, labelSize[1] + 10) # crea el tamaño del rectangulo
                     cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Dibujamos el cuadrado finalmente
                     cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # pone el texto en el rectangulo
-                    
-                    for i in copia:
-                        if len(i.split(" "))>=6:
-                            if i.split(" ")[5]=="Ambos" or  str(i.split(" ")[5]).count(categorias[object_name])>0 and a>99:
-                                bot.send_message(i.split(" ")[3], "Hey "+i.split(" ")[1]+" creo que tu "+categorias[object_name]+" desea entrar, te mando foto")
-                                cv2.imwrite("frame.jpg", frame)
-                                bot.send_photo(i.split(" ")[3], open('frame.jpg','rb'))
-                                a=0
+                    if a >99:
+                        for i in copia:
+                            if len(i.split(" "))>=6:
+                                if i.split(" ")[5]=="Ambos" or  str(i.split(" ")[5]).count(categorias[object_name])>0:
+                                    bot.send_message(i.split(" ")[3], "Hey "+i.split(" ")[1]+" creo que tu "+categorias[object_name]+" desea entrar, te mando foto")
+                                    cv2.imwrite("frame.jpg", frame)
+                                    bot.send_photo(i.split(" ")[3], open('frame.jpg','rb'))
+                                    a=0
 
         
         if Estado:
