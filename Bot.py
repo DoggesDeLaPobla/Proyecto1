@@ -9,7 +9,7 @@ except:
 import cv2
 import os
 
-f = open(os.path.dirname(os.path.abspath(__file__))+"/bot.key", "r")
+f = open("./bot.key", "r")
 key=f.read()
 f.close()
 modo=0
@@ -21,7 +21,7 @@ def start(update, context):
 def button(update, context):
     query = update.callback_query
     query.answer()
-    f = open(os.path.dirname(os.path.abspath(__file__))+"/usuarios.codec", "r")
+    f = open("./usuarios.codec", "r")
     copy=""
     est=False
     f2=f.readlines()
@@ -39,11 +39,11 @@ def button(update, context):
         if len(i)>5:
             s+=i+"\n"
     f.close()
-    f=open(os.path.dirname(os.path.abspath(__file__))+"/usuarios.codec","w")
+    f=open("./usuarios.codec","w")
     f.write(s)
     f.close()
     query.message.reply_text("Tu tipo de animal a sido anclado a tu perfil!\nEsta es una foto del lugar de donde te notificare")
-    query.bot.send_photo(chat_id=update.effective_chat.id, photo=open(os.path.dirname(os.path.abspath(__file__))+'/frame1.jpg','rb'))
+    query.bot.send_photo('./frame1.jpg','rb')
 
 
 
@@ -77,9 +77,9 @@ def image_handler(update, context):
     if modo==1:
 
         photo_file = update.message.photo[-1].get_file()
-        photo_file.download(os.path.dirname(os.path.abspath(__file__))+'/deteccion.jpg')
+        photo_file.download('./deteccion.jpg')
         
-        img = cv2.imread(os.path.dirname(os.path.abspath(__file__))+"/deteccion.jpg")
+        img = cv2.imread("./deteccion.jpg")
         img = cv2.resize(img, (1280,720))
 
 
