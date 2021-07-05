@@ -49,7 +49,7 @@ sh iniciar.sh
 ```
 sudo python3 Auto.py
 ```
-• y para eliminar el inicio automatico
+• Y para eliminar el inicio automatico
 ```
 sudo python3 DelAuto.py
 ```
