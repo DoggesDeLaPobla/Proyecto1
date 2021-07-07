@@ -14,7 +14,7 @@ Github del programa: https://github.com/tzutalin/labelImg
 # 𝕀𝕟𝕥𝕖𝕘𝕣𝕒𝕟𝕥𝕖𝕤 𝕪 𝕣𝕠𝕝𝕖𝕤
 
 
-• Fabian Toro    🠒  202030017-8
+• Fabian Palacios    🠒  202030017-8
 
 • Ana Gonzalez   🠒  202130009-0
 
