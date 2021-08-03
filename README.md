@@ -1,4 +1,4 @@
-# ℙ𝕣𝕠𝕪𝕖𝕔𝕥𝕠 𝔻𝕠𝕘𝕘𝕖𝕤𝔻𝕖𝕃𝕒ℙ𝕠𝕓𝕝𝕒🐕🦴
+# 𝗣𝗿𝗼𝘆𝗲𝗰𝘁𝗼 𝗗𝗼𝗴𝗴𝗲𝘀𝗗𝗲𝗟𝗮𝗣𝗼𝗯𝗹𝗮🐕🦴
 • Repositorio creado por el grupo "DoggesDeLaPobla"<br>
 
 • Este proyecto utiliza diferente documentación y programas para su desarrollo 
@@ -11,7 +11,7 @@ Github del programa: https://github.com/tzutalin/labelImg
 <------- Nube con más información e instrucctivos -------><br>
 ☁ https://usmcl-my.sharepoint.com/:f:/g/personal/ethan_leiva_usm_cl/ErvVWQQnTvZCmqCxm3eJ1PQB6-HL0ac2BCV6Gb5vJfv85Q?e=fD5lE9
   
-# 𝕀𝕟𝕥𝕖𝕘𝕣𝕒𝕟𝕥𝕖𝕤 𝕪 𝕣𝕠𝕝𝕖𝕤
+# 𝗜𝗻𝘁𝗲𝗴𝗿𝗮𝗻𝘁𝗲𝘀 𝘆 𝗿𝗼𝗹𝗲𝘀
 
 
 • Fabian Palacios    🠒  202030017-8
@@ -24,19 +24,19 @@ Github del programa: https://github.com/tzutalin/labelImg
 
 
 
-# 𝕆𝕣𝕚𝕘𝕖𝕟
+# 𝗢𝗿𝗶𝗴𝗲𝗻
 
 • Nuestro proyecto tuvo origen al momento de encontrar una encuesta realizada a las personas en el año 2019, donde el 73% de los chilenos asegura tener un promedio de 2 mascotas en su hogar. Después de esto hicimos una lluvia de ideas sobre que inconvenientes o complicaciones se les proporcionan en su vida cotidiana, a lo que concluimos que una de las más grandes preocupaciones son cuando las mascotas salen fuera del hogar, debido a que elimina bastante tiempo el estar pendiente de ellos cuando se ecuentran en su momento de recreacion. Además concluimos que los perros y los gatos son las mascotas más frecuentes que salen sin supervisión constante por lo cual son los que predominaran en nuestro proyecto. 
 
-# 𝔻𝕠𝕘𝕘𝕖𝕤𝔻𝕖𝕃𝕒ℙ𝕠𝕓𝕝𝕒
+# 𝗗𝗼𝗴𝗴𝗲𝘀𝗗𝗲𝗟𝗮𝗣𝗼𝗯𝗹𝗮
 
 • Proyecto realizado por nuestro equipo para la asignatura IWG101 que consiste en una red neuronal capaz de identificar perros y gatos, con la finalidad de integrarse a una raspberry pi 4 modelo B asociada a una cámara y a un bot de telegram para poder genenrar un sistema de alerta inteligente (o automatización de una puerta en caso de ser posible) para darle más libertad a nuestras mascotas de movilizarse por la entradas del hogar. 
 
-# ¿ℂ𝕠𝕞𝕠 𝔽𝕦𝕟𝕔𝕚𝕠𝕟𝕒?
+# ¿𝗖𝗼́𝗺𝗼 𝗳𝘂𝗻𝗰𝗶𝗼𝗻𝗮? 
 
 • La cámara captura la imagen que es enviada a la raspberry pi 4 con el programa integrado, esta es analizada y en caso de reconocer a tu mascota enviara un aviso mediante un bot de telegram para que puedas abrir la puerta a tu mascota o en su defecto, si la puerta esta automatizada, se abra y cierre de forma automatica en el momento que la mascota entre. 
 
-# 𝕀𝕟𝕤𝕥𝕒𝕝𝕒𝕔𝕚ó𝕟 𝕪 𝕗𝕦𝕟𝕔𝕚𝕠𝕟𝕒𝕞𝕚𝕖𝕟𝕥𝕠 𝕕𝕖𝕝 𝕡𝕣𝕠𝕘𝕣𝕒𝕞𝕒
+# 𝗜𝗻𝘀𝘁𝗮𝗹𝗮𝗰𝗶𝗼́𝗻 𝘆 𝗳𝘂𝗻𝗰𝗶𝗼𝗻𝗮𝗺𝗶𝗲𝗻𝘁𝗼 𝗱𝗲𝗹 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝗮
 
 • 𝗣𝗿𝗶𝗺𝗲𝗿𝗼 🠒 𝗰𝗹𝗼𝗻𝗮𝗺𝗼𝘀 𝗲𝗹 𝗿𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝗶𝗼 :
 ```
